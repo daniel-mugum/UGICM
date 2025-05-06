@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #000000;
+  background-image:
+    radial-gradient(circle at 25% 30%, rgba(255, 215, 0, 0.15) 0%, transparent 40%),
+    radial-gradient(circle at 75% 60%, rgba(255, 215, 0, 0.15) 0%, transparent 40%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: #fff;
+  padding-top: 140px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* HEADER */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  padding: 30px 20px;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
+  border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+  border-radius: 0 0 30px 30px;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.1);
+  text-align: center;
+}
+
+.header-logo {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  transition: all 0.3s ease-in-out;
+  border: 1px solid transparent;
+}
+
+nav a:hover {
+  color: gold;
+  border-color: gold;
+  background: rgba(255, 255, 255, 0.2);
+  transform: scale(1.05);
+}
+
+/* MENU TOGGLE MOBILE */
+.menu-toggle {
+  display: none;
+  font-size: 2rem;
+  color: white;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+/* SECTIONS */
+main, section {
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  border: 2px solid gold;
+  border-radius: 25px;
+  padding: 20px;
+  margin: 50px 20px;
+  max-width: 1000px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+main:hover, section:hover {
+  transform: translateY(-6px);
+}
+
+/* FOOTER */
+footer {
+  margin: 60px 0 20px;
+  text-align: center;
+  color: #aaa;
+}
+
+/* IMAGES */
+.image-responsive {
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+  margin: 20px 0;
+  box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.image-responsive:hover {
+  transform: scale(1.05);
+}
+
+/* FORMULAIRE */
+form input,
+form textarea,
+form button {
+  width: 100%;
+  margin: 12px 0;
+  padding: 14px;
+  border: 2px solid gold;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.9);
+  color: black;
+  font-size: 1rem;
+}
+
+form button {
+  background-color: gold;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+form button:hover {
+  background-color: goldenrod;
+  transform: scale(1.05);
+}
+
+/* SOCIAL BUTTONS */
+.social-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
+}
+
+.social-buttons a {
+  padding: 12px 20px;
+  border-radius: 30px;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.3s ease-in-out;
+}
+
+.btn-whatsapp { background-color: #25D366; }
+.btn-tiktok   { background-color: #000; border: 1px solid white; }
+.btn-facebook { background-color: #1877F2; }
+
+.social-buttons a:hover {
+  transform: scale(1.08) rotate(1deg);
+}
+
+/* ANIMATIONS */
+.animate-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-out;
+}
+
+.animate-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  nav {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.9);
+    border-radius: 20px;
+    padding: 20px;
+    border: 1px solid gold;
+    margin-top: 10px;
+  }
+
+  nav.open {
+    display: flex;
+  }
+
+  nav a {
+    margin: 10px 0;
+    width: 100%;
+    text-align: center;
+  }
+}
+.image-responsive {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    margin: 20px 0;
+    box-shadow: 0 8px 25px rgba(255, 215, 0, 0.2);
+    transition: transform 0.3s ease;
+  }
+  
+  .image-responsive:hover {
+    transform: scale(1.03);
+  }
+.texte {
+  text-align: center;
+}
+
+.calendar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 20px;
+  background-color: #000;
+  border-radius: 15px;
+  box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+}
+
+.day {
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  padding: 15px;
+  background-color: #333;
+  color: white;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.image-responsive {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+.texte {
+  font-size: 16px;
+  text-align: center;
+  max-width: 600px;
+  margin-top: 10px;
+}
+
+/* Adaptation aux écrans mobiles */
+@media (max-width: 600px) {
+  .calendar {
+      flex-direction: column;
+      align-items: center;
+  }
+  .day {
+      width: 100%;
+  }
+}
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@700&display=swap');
+
+/* Base */
+body {
+  font-family: 'Playfair Display', serif;
+}
+
+/* HEADER */
+.header-logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: 3rem;
+  font-weight: bold;
+}
+/* Augmentation de la taille de police sauf pour le header */
+body {
+  font-size: 12px; /* Augmente la taille de texte */
+  font-family: 'Playfair Display', serif;
+}
+
+.texte, .day, p, nav a {
+  font-size: 20px; /* Texte plus lisible et imposant */
+}
+
+/* Maintien de la taille originale pour le header */
+.header-logo {
+  font-size: 2rem; /* Taille du header reste inchangée */
+}
+
